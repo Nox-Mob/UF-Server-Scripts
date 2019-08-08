@@ -81,21 +81,61 @@ goto end
 
 :MapRotation4
 move /y  %squadpublicconfig%\MapRotation.cfg %squadpublicconfig%\MapRotation\MapRotation.cfg*
-ren %squadpublicconfig%\MapRotation\MapRotation.cfg MapRotation1.cfg
-move /y  %squadpublicconfig%\MapRotation\MapRotation2.cfg %squadpublicconfig%\MapRotation2.cfg*
-ren %squadpublicconfig%\MapRotation2.cfg MapRotation.cfg
+ren %squadpublicconfig%\MapRotation\MapRotation.cfg MapRotation4.cfg
+move /y  %squadpublicconfig%\MapRotation\MapRotation4.cfg %squadpublicconfig%\MapRotation4.cfg*
+ren %squadpublicconfig%\MapRotation4.cfg MapRotation.cfg
 echo 4
 goto end
 
 :MapRotation5
 move /y %squadpublicconfig%\MapRotation.cfg %squadpublicconfig%\MapRotation\MapRotation.cfg
 ren %squadpublicconfig%\MapRotation\MapRotation.cfg %squadpublicconfig%\MapRotation\MapRotation5.cfg
-move /y %squadpublicconfig%\MapRotation\MapRotation1.cfg %squadpublicconfig%\MapRotation\MapRotation1.cfg
-ren %squadpublicconfig%\MapRotation\MapRotation1.cfg %squadpublicconfig%\MapRotation\MapRotation.cfg
+move /y %squadpublicconfig%\MapRotation\MapRotation6.cfg %squadpublicconfig%\MapRotation\MapRotation6.cfg
+ren %squadpublicconfig%\MapRotation\MapRotation6.cfg %squadpublicconfig%\MapRotation\MapRotation.cfg
 echo 5
 
+:MapRotation6
+move /y  %squadpublicconfig%\MapRotation.cfg %squadpublicconfig%\MapRotation\MapRotation.cfg*
+ren %squadpublicconfig%\MapRotation\MapRotation.cfg MapRotation6.cfg
+move /y  %squadpublicconfig%\MapRotation\MapRotation7.cfg %squadpublicconfig%\MapRotation7.cfg*
+ren %squadpublicconfig%\MapRotation7.cfg MapRotation.cfg
+echo 6
 goto end
+
+:MapRotation7
+move /y  %squadpublicconfig%\MapRotation.cfg %squadpublicconfig%\MapRotation\MapRotation.cfg*
+ren %squadpublicconfig%\MapRotation\MapRotation.cfg MapRotation7.cfg
+move /y  %squadpublicconfig%\MapRotation\MapRotation8.cfg %squadpublicconfig%\MapRotation8.cfg*
+ren %squadpublicconfig%\MapRotation8.cfg MapRotation.cfg
+echo 7
+goto end
+
+:MapRotation8
+move /y  %squadpublicconfig%\MapRotation.cfg %squadpublicconfig%\MapRotation\MapRotation.cfg*
+ren %squadpublicconfig%\MapRotation\MapRotation.cfg MapRotation8.cfg
+move /y  %squadpublicconfig%\MapRotation\MapRotation9.cfg %squadpublicconfig%\MapRotation9.cfg*
+ren %squadpublicconfig%\MapRotation9.cfg MapRotation.cfg
+echo 8
+goto end
+
+:MapRotation9
+move /y  %squadpublicconfig%\MapRotation.cfg %squadpublicconfig%\MapRotation\MapRotation.cfg*
+ren %squadpublicconfig%\MapRotation\MapRotation.cfg MapRotation9.cfg
+move /y  %squadpublicconfig%\MapRotation\MapRotation10.cfg %squadpublicconfig%\MapRotation10.cfg*
+ren %squadpublicconfig%\MapRotation10.cfg MapRotation.cfg
+echo 9
+goto end
+
+:MapRotation10
+move /y  %squadpublicconfig%\MapRotation.cfg %squadpublicconfig%\MapRotation\MapRotation.cfg*
+ren %squadpublicconfig%\MapRotation\MapRotation.cfg MapRotation10.cfg
+move /y  %squadpublicconfig%\MapRotation\MapRotation1.cfg %squadpublicconfig%\MapRotation1.cfg*
+ren %squadpublicconfig%\MapRotation1.cfg MapRotation.cfg
+echo 10
+goto end
+
 :end
+:: Pause added to test compeltiion and see errors.
 pause
 
 :: Possibly More to follow on.
