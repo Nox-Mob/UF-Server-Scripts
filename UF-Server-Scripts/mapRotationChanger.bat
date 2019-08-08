@@ -11,7 +11,7 @@ set rootdir="C:\servers"
 echo 0
 
 :: Detects for file names, and points to correct missing file name code exec
-:: I don't think it is currently echoing the detected missing map. 
+:: I don't think it is currently echoing the detected missing map.
 
 :DetectMR1
 if not exist %squadpublicconfig%\MapRotation\MapRotation1.cfg goto MapRotation1
@@ -53,56 +53,51 @@ echo "Detected Missing MapRotation9 from MapRotation Folder"
 if not exist %squadpublicconfig%\MapRotation\MapRotation10.cfg goto MapRotation10
 echo "Detected Missing MapRotation10 from MapRotation Folder"
 
-
+:: Moves running maprotation to storage, moves new maprotation to running.
+:: Renames running to storage/detection name, and renames new to running name
 :MapRotation1
-xcopy /y %squadpublicconfig%\MapRotation.cfg %squadpublicconfig%\MapRotation\MapRotation.cfg*
-del %squadpublicconfig%\MapRotation.cfg
+move /y  %squadpublicconfig%\MapRotation.cfg %squadpublicconfig%\MapRotation\MapRotation.cfg*
 ren %squadpublicconfig%\MapRotation\MapRotation.cfg MapRotation1.cfg
-xcopy /y %squadpublicconfig%\MapRotation\MapRotation2.cfg %squadpublicconfig%\MapRotation2.cfg*
-del %squadpublicconfig%\MapRotation\MapRotation2.cfg
+move /y  %squadpublicconfig%\MapRotation\MapRotation2.cfg %squadpublicconfig%\MapRotation2.cfg*
 ren %squadpublicconfig%\MapRotation2.cfg MapRotation.cfg
 echo 1
 goto end
 
 :MapRotation2
-xcopy /y %squadpublicconfig%\MapRotation.cfg %squadpublicconfig%\MapRotation\MapRotation.cfg*
-del %squadpublicconfig%\MapRotation.cfg
+move /y  %squadpublicconfig%\MapRotation.cfg %squadpublicconfig%\MapRotation\MapRotation.cfg*
 ren %squadpublicconfig%\MapRotation\MapRotation.cfg MapRotation2.cfg
-xcopy /y %squadpublicconfig%\MapRotation\MapRotation3.cfg %squadpublicconfig%\MapRotation3.cfg*
-del %squadpublicconfig%\MapRotation\MapRotation3.cfg
+move /y  %squadpublicconfig%\MapRotation\MapRotation3.cfg %squadpublicconfig%\MapRotation3.cfg*
 ren %squadpublicconfig%\MapRotation3.cfg MapRotation.cfg
 echo 2
 goto end
 
 :MapRotation3
-xcopy /y %squadpublicconfig%\MapRotation.cfg %squadpublicconfig%\MapRotation\MapRotation.cfg*
-del %squadpublicconfig%\MapRotation.cfg
+move /y  %squadpublicconfig%\MapRotation.cfg %squadpublicconfig%\MapRotation\MapRotation.cfg*
 ren %squadpublicconfig%\MapRotation\MapRotation.cfg MapRotation3.cfg
-xcopy /y %squadpublicconfig%\MapRotation\MapRotation4.cfg %squadpublicconfig%\MapRotation4.cfg*
-del %squadpublicconfig%\MapRotation\MapRotation4.cfg
+move /y  %squadpublicconfig%\MapRotation\MapRotation4.cfg %squadpublicconfig%\MapRotation4.cfg*
 ren %squadpublicconfig%\MapRotation4.cfg MapRotation.cfg
 echo 3
 goto end
 
 :MapRotation4
-xcopy /y %squadpublicconfig%\MapRotation.cfg %squadpublicconfig%\MapRotation\MapRotation.cfg*
-del %squadpublicconfig%\MapRotation.cfg
+move /y  %squadpublicconfig%\MapRotation.cfg %squadpublicconfig%\MapRotation\MapRotation.cfg*
 ren %squadpublicconfig%\MapRotation\MapRotation.cfg MapRotation1.cfg
-xcopy /y %squadpublicconfig%\MapRotation\MapRotation2.cfg %squadpublicconfig%\MapRotation2.cfg*
-del %squadpublicconfig%\MapRotation\MapRotation2.cfg
+move /y  %squadpublicconfig%\MapRotation\MapRotation2.cfg %squadpublicconfig%\MapRotation2.cfg*
 ren %squadpublicconfig%\MapRotation2.cfg MapRotation.cfg
 echo 4
 goto end
 
 :MapRotation5
-copy %squadpublicconfig%\MapRotation.cfg %squadpublicconfig%\MapRotation\MapRotation.cfg
+move /y %squadpublicconfig%\MapRotation.cfg %squadpublicconfig%\MapRotation\MapRotation.cfg
 ren %squadpublicconfig%\MapRotation\MapRotation.cfg %squadpublicconfig%\MapRotation\MapRotation5.cfg
-copy %squadpublicconfig%\MapRotation\MapRotation1.cfg %squadpublicconfig%\MapRotation\MapRotation1.cfg
+move /y %squadpublicconfig%\MapRotation\MapRotation1.cfg %squadpublicconfig%\MapRotation\MapRotation1.cfg
 ren %squadpublicconfig%\MapRotation\MapRotation1.cfg %squadpublicconfig%\MapRotation\MapRotation.cfg
 echo 5
+
 goto end
 :end
 pause
+
 :: Possibly More to follow on.
 :: Still need to start the sevrers tuilizing this
 :: rather, lets use a different script, and have this script call upon it instaed
