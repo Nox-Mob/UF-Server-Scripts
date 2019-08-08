@@ -11,6 +11,8 @@ set rootdir="C:\servers"
 echo 0
 
 :: Detects for file names, and points to correct missing file name code exec
+:: I don't think it is currently echoing the detected missing map. 
+
 :DetectMR1
 if not exist %squadpublicconfig%\MapRotation\MapRotation1.cfg goto MapRotation1
 echo "Detected Missing MapRotation1 from MapRotation Folder"
@@ -31,6 +33,25 @@ echo "Detected Missing MapRotation4 from MapRotation Folder"
 if not exist %squadpublicconfig%\MapRotation\MapRotation5.cfg goto MapRotation5
 echo "Detected Missing MapRotation5 from MapRotation Folder"
 
+:DetectMR6
+if not exist %squadpublicconfig%\MapRotation\MapRotation6.cfg goto MapRotation6
+echo "Detected Missing MapRotation6 from MapRotation Folder"
+
+:DetectMR7
+if not exist %squadpublicconfig%\MapRotation\MapRotation7.cfg goto MapRotation7
+echo "Detected Missing MapRotation7 from MapRotation Folder"
+
+:DetectMR8
+if not exist %squadpublicconfig%\MapRotation\MapRotation8.cfg goto MapRotation8
+echo "Detected Missing MapRotation8 from MapRotation Folder"
+
+:DetectMR9
+if not exist %squadpublicconfig%\MapRotation\MapRotation9.cfg goto MapRotation9
+echo "Detected Missing MapRotation9 from MapRotation Folder"
+
+:DetectMR10
+if not exist %squadpublicconfig%\MapRotation\MapRotation10.cfg goto MapRotation10
+echo "Detected Missing MapRotation10 from MapRotation Folder"
 
 
 :MapRotation1
@@ -79,7 +100,10 @@ ren %squadpublicconfig%\MapRotation\MapRotation.cfg %squadpublicconfig%\MapRotat
 copy %squadpublicconfig%\MapRotation\MapRotation1.cfg %squadpublicconfig%\MapRotation\MapRotation1.cfg
 ren %squadpublicconfig%\MapRotation\MapRotation1.cfg %squadpublicconfig%\MapRotation\MapRotation.cfg
 echo 5
-pause
 goto end
 :end
 pause
+:: Possibly More to follow on.
+:: Still need to start the sevrers tuilizing this
+:: rather, lets use a different script, and have this script call upon it instaed
+:: --NOX
