@@ -47,7 +47,7 @@ echo Were they properly copied over?
 set /P i="Y or N? "
 if /I "%i%" EQU "Y" goto :runserverquestion
 if /I "%i%" EQU "N" goto :copyconfig
-goto end 
+goto end
 
 
 ::The following has been untested up until this point. If this works, please let NOX know, as he will be able to resolve this in the future.
