@@ -53,6 +53,22 @@ echo "Detected Missing MapRotation9 from MapRotation Folder"
 if not exist %squadpublicconfig%\MapRotation\MapRotation10.cfg goto MapRotation10
 echo "Detected Missing MapRotation10 from MapRotation Folder"
 
+:DetectMR11
+if not exist %squadpublicconfig%\MapRotation\MapRotation11.cfg goto MapRotation11
+echo "Detected Missing MapRotation11 from MapRotation Folder"
+
+:DetectMR12
+if not exist %squadpublicconfig%\MapRotation\MapRotation12.cfg goto MapRotation12
+echo "Detected Missing MapRotation12 from MapRotation Folder"
+
+:DetectMR13
+if not exist %squadpublicconfig%\MapRotation\MapRotation13.cfg goto MapRotation13
+echo "Detected Missing MapRotation13 from MapRotation Folder"
+
+:DetectMR14
+if not exist %squadpublicconfig%\MapRotation\MapRotation14.cfg goto MapRotation14
+echo "Detected Missing MapRotation14 from MapRotation Folder"
+
 :: Moves running maprotation to storage, moves new maprotation to running.
 :: Renames running to storage/detection name, and renames new to running name
 :MapRotation1
@@ -129,9 +145,41 @@ goto end
 :MapRotation10
 move /y  %squadpublicconfig%\MapRotation.cfg %squadpublicconfig%\MapRotation\MapRotation.cfg*
 ren %squadpublicconfig%\MapRotation\MapRotation.cfg MapRotation10.cfg
+move /y  %squadpublicconfig%\MapRotation\MapRotation11.cfg %squadpublicconfig%\MapRotation11.cfg*
+ren %squadpublicconfig%\MapRotation11.cfg MapRotation.cfg
+echo 10
+goto end
+
+:MapRotation11
+move /y  %squadpublicconfig%\MapRotation.cfg %squadpublicconfig%\MapRotation\MapRotation.cfg*
+ren %squadpublicconfig%\MapRotation\MapRotation.cfg MapRotation11.cfg
+move /y  %squadpublicconfig%\MapRotation\MapRotation12.cfg %squadpublicconfig%\MapRotation12.cfg*
+ren %squadpublicconfig%\MapRotation12.cfg MapRotation.cfg
+echo 11
+goto end
+
+:MapRotation12
+move /y  %squadpublicconfig%\MapRotation.cfg %squadpublicconfig%\MapRotation\MapRotation.cfg*
+ren %squadpublicconfig%\MapRotation\MapRotation.cfg MapRotation12.cfg
+move /y  %squadpublicconfig%\MapRotation\MapRotation13.cfg %squadpublicconfig%\MapRotation13.cfg*
+ren %squadpublicconfig%\MapRotation13.cfg MapRotation.cfg
+echo 12
+goto end
+
+:MapRotation13
+move /y  %squadpublicconfig%\MapRotation.cfg %squadpublicconfig%\MapRotation\MapRotation.cfg*
+ren %squadpublicconfig%\MapRotation\MapRotation.cfg MapRotation13.cfg
+move /y  %squadpublicconfig%\MapRotation\MapRotation14.cfg %squadpublicconfig%\MapRotation14.cfg*
+ren %squadpublicconfig%\MapRotation14.cfg MapRotation.cfg
+echo 13
+goto end
+
+:MapRotation14
+move /y  %squadpublicconfig%\MapRotation.cfg %squadpublicconfig%\MapRotation\MapRotation.cfg*
+ren %squadpublicconfig%\MapRotation\MapRotation.cfg MapRotation14.cfg
 move /y  %squadpublicconfig%\MapRotation\MapRotation1.cfg %squadpublicconfig%\MapRotation1.cfg*
 ren %squadpublicconfig%\MapRotation1.cfg MapRotation.cfg
-echo 10
+echo 14
 goto end
 
 :end
